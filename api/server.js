@@ -17,7 +17,7 @@ server.db = db;
 server.use(jsonServer.router(server.db));
 
 // db.json dosyasını güncelle
-fs.writeFileSync("db.json", JSON.stringify(server.db, null, 2));
+fs.writeFileSync("./tmp/db.json", JSON.stringify(server.db, null, 2));
 
 server.listen(3000, () => {
     console.log("JSON Server is running");
