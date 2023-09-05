@@ -73,7 +73,7 @@ module.exports = () => {
             dueDate: faker.date.future(),
             attachments: [],
         };
-        const attachmentCount = faker.datatype.number({ min: 2, max: 7 });
+        const attachmentCount = faker.number.int({ min: 2, max: 7 });
         for (let j = 0; j < attachmentCount; j++) {
             const isImage = Math.random() < 0.5;
 
@@ -84,7 +84,7 @@ module.exports = () => {
                 uploadDate: faker.date.past(),
                 comment: faker.lorem.words({ min: 4, max: 15 }),
                 user: data.users[
-                    faker.datatype.number({
+                    faker.number.int({
                         min: 1,
                         max: generatedUserNumber,
                     })
